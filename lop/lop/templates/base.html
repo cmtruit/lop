@@ -10,14 +10,14 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="{% static "assets/images/favicon.png" %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static "/assets/images/favicon.png" %}">
     <title>Monster Admin Template - The Most Complete & Trusted Bootstrap 4 Admin Template</title>
     <!-- Bootstrap Core CSS -->
     <link href="{% static "/assets/plugins/bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="{% static "css/style.css"%}" rel="stylesheet">
     <!-- You can change the theme colors from here -->
-    <link href="css/colors/blue.css" id="theme" rel="stylesheet">
+    <link href="{% static "css/colors/blue.css"%}" id="theme" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -27,7 +27,7 @@
 </head>
 
 <body class="fix-header fix-sidebar card-no-border">
-  Welcome to bootstrap
+
     <!-- ============================================================== -->
     <!-- Preloader - style you can find in spinners.css -->
     <!-- ============================================================== -->
@@ -53,7 +53,7 @@
                         <b>
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                             <!-- Dark Logo icon -->
-                            <img src="../assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
+                            <img src="{% static "assets/images/logo-icon.png" %}" alt="homepage" class="dark-logo" />
 
                         </b>
                         <!--End Logo icon -->
