@@ -5,8 +5,8 @@ Email: niravjoshi87@gmail.com
 File: scss
 */
 
-/******************* 
-Global Styles 
+/*******************
+Global Styles
 *******************/
 
 * {
@@ -37,7 +37,7 @@ a.link{
     }
 }
 .img-responsive{
-    
+
     width: 100%;
     height: auto;
 }
@@ -347,7 +347,7 @@ vertical alignment
 }
 
 .vb {
-    vertical-align: bottom!important; 
+    vertical-align: bottom!important;
 }
 
 /*******************
@@ -721,7 +721,7 @@ Table Cell
     vertical-align: middle;
 }
 .table td, .table th{
-    border-color:$table-border; 
+    border-color:$table-border;
 }
 .table thead th, .table th{
     font-weight:500;
@@ -970,7 +970,7 @@ Buttons
     padding: 7px 12px;
     font-size: 14px;
     cursor: pointer;
-    
+
 }
 .btn-group{
     label{
@@ -980,7 +980,7 @@ Buttons
             color:$bodytext!important;
         }
      }
-}    
+}
 .btn-lg{
     padding:.75rem 1.5rem;
     font-size: 1.25rem;
@@ -990,7 +990,7 @@ Buttons
     width: 40px;
     height: 40px;
     padding: 10px;
-    
+
 }
 .btn-circle.btn-sm{
     width: 35px;
@@ -1082,7 +1082,7 @@ Buttons
     &.active, &:focus{
         background: $themecolor-dark;
     }
-    
+
 }
 .btn-success,
 .btn-success.disabled {
@@ -1353,7 +1353,7 @@ Buttons
 .open > .dropdown-toggle.btn-inverse {
     background-color: $inverse-dark;
     border: 1px solid $inverse-dark;
-   
+
 }
 
 .btn-red:hover,
@@ -1723,7 +1723,7 @@ Checkbox
 
 
 /*******************
-Radios 
+Radios
 *******************/
 
 .radio {
@@ -1927,7 +1927,7 @@ Radios
     cursor:pointer;
 }
 /*******************
-File Upload 
+File Upload
 ******************/
 
 .fileupload {
@@ -1958,7 +1958,7 @@ Megamenu
         background: url(../../assets/images/background/megamenubg.jpg)no-repeat right bottom #fff;
     }
     ul{ padding: 0px;
-        
+
         li{
             list-style: none;
         }
@@ -2010,13 +2010,13 @@ dropdown-item
 Custom-select
 ******************/
 .custom-select{
-    background: url(../../assets/images/custom-select.png) right .75rem center no-repeat;
+    background: url({% static 'assets/images/custom-select.png'%}) right .75rem center no-repeat;
 }
 /*******************
 textarea
 ******************/
 textarea{
-    resize: none; 
+    resize: none;
 }
 /*******************
 Form-control
@@ -2046,7 +2046,7 @@ form label{
 }
 .form-horizontal label{
     margin-bottom: 0px;
-    
+
 }
 .form-control-static{
     padding-top: 0px;
@@ -2072,11 +2072,11 @@ Layouts
         background:$light;
     }
     .left-sidebar{
-      box-shadow:1px 0px 20px rgba(0, 0, 0, 0.08);  
+      box-shadow:1px 0px 20px rgba(0, 0, 0, 0.08);
     }
     .left-sidebar, .sidebar-nav{
         background:$sidebar-white;
-        
+
     }
     .sidebar-nav>ul>li>a.active{
         background:$light;
@@ -2122,7 +2122,7 @@ Layouts
 
 .fix-width{
     width:100%;
-    max-width: 1170px; 
+    max-width: 1170px;
     margin:0 auto;
 }
 ul.common li{
