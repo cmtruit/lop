@@ -16,6 +16,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 print(BASE_DIR)
 TEMPLATE_PATH = os.path.join(BASE_DIR, 'lop/templates')
+STATIC_PATH = os.path.join(BASE_DIR, 'lop/')
 print(TEMPLATE_PATH)
 
 # Quick-start development settings - unsuitable for production
@@ -130,8 +131,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, '..', 'static'),
+    os.path.join(STATIC_PATH, 'static'),
 )
 print("STATICDIR: " + str(STATICFILES_DIRS))
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(STATIC_PATH, 'static')
 STATIC_URL = '/static/'
