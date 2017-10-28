@@ -23,10 +23,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.index, name='index'),
     url(r'^$', views.index, name='index'),
+    
 ]
-
-urlpatterns += patterns('',
-(r'^/static/(?P<path>.*)$', 'django.views.static.serve',
-{'/ecollar_site/': settings.STATIC_ROOT,
-'show_indexes' : True}),
-)
