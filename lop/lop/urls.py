@@ -22,5 +22,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.index, name='index'),
     url(r'^$', views.index, name='index'),
-    url(r'^static/', STATICFILES_DIRS, name='static'),
+    url(r'^static/', settings.STATICFILES_DIRS, name='static'),
 ]
