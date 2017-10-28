@@ -24,3 +24,10 @@ urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^$', views.index, name='index'),
 ]
+
+`if settings.DEBUG:
+urlpatterns += patterns('',
+(r'^/static/(?P<path>.*)$', 'django.views.static.serve',
+{'/ecollar_site/': settings.STATIC_ROOT,
+'show_indexes' : True}),
+)`
