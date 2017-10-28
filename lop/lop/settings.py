@@ -57,11 +57,11 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'lop.urls'
-
+BASE_DIR = os.path.realpath('.')
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates',],
+        'DIRS': [BASE_DIR + '/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
