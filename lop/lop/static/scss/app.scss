@@ -8,7 +8,7 @@ File: scss
 /*******************
 Global Styles
 *******************/
-
+{% load staticfiles %}
 * {
     outline: none !important;
 }
