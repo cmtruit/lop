@@ -2010,7 +2010,7 @@ dropdown-item
 Custom-select
 ******************/
 .custom-select{
-    background: url({% static 'assets/images/custom-select.png'%}) right .75rem center no-repeat;
+    background: url(static/assets/images/custom-select.png) right .75rem center no-repeat;
 }
 /*******************
 textarea
