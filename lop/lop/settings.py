@@ -25,7 +25,14 @@ SECRET_KEY = '%2^n+y_3%%$wtf4lpn!l+ffnzw6+r_xr=y%s=%s7^hyms!ptnw'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+#Set Database Info
+
+#DB_NAME = os.environ['DB_NAME']
+#DB_USER = os.environ['DB_USER']
+#DB_PASS = os.environ['DB_PASS']
+
+
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -37,7 +44,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'south',
 ]
 
 MIDDLEWARE = [
@@ -76,8 +82,12 @@ WSGI_APPLICATION = 'lop.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME' : 'lop',
+        'USER' : 'lopadmin',
+        'PASSWORD' : 'lop',
+        'HOST' : 'localhost',
+        'PORT' : '',
     }
 }
 
