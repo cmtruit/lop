@@ -29,6 +29,4 @@ before_script:
 script:
   - cd ./lop/
   - python manage.py makemigrations
-  - python manage.py migrate
-
-after_success: coveralls
+  - python manage.py migrate sdfg
