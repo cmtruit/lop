@@ -27,7 +27,6 @@ before_script:
   - psql -c "GRANT ALL PRIVILEGES ON DATABASE lop TO lopadmin;" -U postgres
 
 script:
-  - coverage run --source=lop manage.py test lop
   - cd ./lop/
   - python manage.py makemigrations
   - python manage.py migrate
