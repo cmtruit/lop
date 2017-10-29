@@ -14,13 +14,18 @@ before_install:
   - export PIP_USE_MIRRORS=true
 
 install:
+  - pip install coverage
   - pip install -r requirements.txt
   - pip install django==$DJANGO --quiet
 
 before_script:
+  - echo $USER
   - pwd
-  -tree -A
+  - ls -l /home/travis/build/$USER/lop
   - psql -c "CREATE DATABASE lop;" -U postgres
 
 script:
+  - coverage run --source=home manage.py test home
   - python manage.py syncdb --noinput
+
+after_success: coveralls
