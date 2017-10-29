@@ -8,7 +8,6 @@ File: scss
 /*******************
 Global Styles
 *******************/
-{% load staticfiles %}
 * {
     outline: none !important;
 }
@@ -2010,7 +2009,7 @@ dropdown-item
 Custom-select
 ******************/
 .custom-select{
-    background: url({{STATIC_ROOT}}/assets/images/custom-select.png) right .75rem center no-repeat;
+    background: url('{{STATIC_URL}}/assets/images/custom-select.png') right .75rem center no-repeat;
 }
 /*******************
 textarea
