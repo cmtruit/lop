@@ -1,7 +1,7 @@
 language: python
 
 python:
-  - 2.6
+
   - 2.7
 
 services: postgresql
@@ -22,7 +22,8 @@ before_script:
   - psql -c "CREATE DATABASE lop;" -U postgres
 
 script:
-  - coverage run --source=home ./lop/manage.py test lop
+  - coverage run --source=lop manage.py test lop
+  - cd ./lop/
   - python manage.py syncdb --noinput
 
 after_success: coveralls
