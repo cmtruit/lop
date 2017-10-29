@@ -19,7 +19,7 @@ install:
   - pip install django==$DJANGO --quiet
 
 before_script:
-  - echo $USER
+  - set
   - pwd
   - ls -l /home/travis/build/$USER/lop
   - psql -c "CREATE DATABASE lop;" -U postgres
