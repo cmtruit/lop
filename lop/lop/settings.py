@@ -133,4 +133,4 @@ USE_TZ = True
 #STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 #print(STATIC_ROOT)
 STATICFILES_DIRS = ( os.path.join(BASE_DIR, 'lop/static'), )
-#STATIC_URL = '/static/'
+STATIC_URL = '/static/'
