@@ -24,6 +24,6 @@ before_script:
 script:
   - coverage run --source=lop manage.py test lop
   - cd ./lop/
-  - python manage.py syncdb --noinput
+  - python manage.py runserver
 
 after_success: coveralls
