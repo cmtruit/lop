@@ -18,6 +18,8 @@ install:
   - pip install django==$DJANGO --quiet
 
 before_script:
+  - pwd
+  -tree -A
   - psql -c "CREATE DATABASE lop;" -U postgres
 
 script:
