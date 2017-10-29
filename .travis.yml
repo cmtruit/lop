@@ -11,10 +11,12 @@
     env: # => 4
 
       -DJANGO=1.11
-    install: # => 5
+#    install: # => 5
 
-      - pip install -r requirements.txt
+#      - pip install -r requirements.txt
 
-    script: # => 7
+#    before_script: cd lop
 
-      -cd lop; python manage.py runserver 0.0.0.0:8000
+#    script: # => 7
+
+#      - python manage.py runserver 0.0.0.0:8000
