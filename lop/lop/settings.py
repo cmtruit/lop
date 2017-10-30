@@ -27,7 +27,8 @@ SECRET_KEY = '%2^n+y_3%%$wtf4lpn!l+ffnzw6+r_xr=y%s=%s7^hyms!ptnw'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
+# Set login redirect location
+LOGIN_REDIRECT_URL = 'home'
 #Set Database Info
 
 #DB_NAME = os.environ['DB_NAME']
