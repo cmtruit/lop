@@ -17,7 +17,7 @@ from django.conf.urls import url
 from django.contrib import admin
 from . import views
 from django.conf import settings
-from api import schema_view
+from api import *
 #from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
