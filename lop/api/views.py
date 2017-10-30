@@ -21,4 +21,4 @@ class SwaggerSchemaView(APIView):
         generator = SchemaGenerator()
         schema = generator.get_schema(request=request)
 
-        return Response(schema)
+        return Response(schema_view)
