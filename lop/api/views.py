@@ -7,5 +7,5 @@ from rest_framework_swagger.views import get_swagger_view
 api_view = get_swagger_view(title='Lights-Out Patching API')
 
 urlpatterns = [
-    url(r'^$', api_view)
+    url(r'^/api', api_view)
 ]
