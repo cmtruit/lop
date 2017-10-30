@@ -4,8 +4,8 @@ from django.shortcuts import render
 from django.conf.urls import url
 from rest_framework_swagger.views import get_swagger_view
 
-api_view = get_swagger_view(title='Lights-Out Patching API')
+schema_view = get_swagger_view(title='Lights-Out Patching API')
 
 urlpatterns = [
-    url(r'^api/', api_view)
+    url(r'^api/', schema_view)
 ]
