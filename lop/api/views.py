@@ -3,12 +3,12 @@ from django.conf.urls import url
 from rest_framework_swagger.views import get_swagger_view
 
 schema_view = get_swagger_view(title='Pastebin API')
-from rest_framework import exceptions
-from rest_framework.permissions import AllowAny
-from rest_framework.renderers import CoreJSONRenderer
-from rest_framework.response import Response
-from rest_framework.schemas import SchemaGenerator
-from rest_framework.views import APIView
+from rest_framework_swagger import exceptions
+from rest_framework_swagger.permissions import AllowAny
+from rest_framework_swagger.renderers import CoreJSONRenderer
+from rest_framework_swagger.response import Response
+from rest_framework_swagger.schemas import SchemaGenerator
+from rest_framework_swagger.views import APIView
 
 from . import renderers
 
