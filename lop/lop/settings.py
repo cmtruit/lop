@@ -50,6 +50,8 @@ INSTALLED_APPS = [
     'rest_framework_swagger',
     'api',
 ]
+for app in INSTALLED_APPS;
+    print(app, "is installed")
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
