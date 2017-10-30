@@ -50,7 +50,7 @@ INSTALLED_APPS = [
     'rest_framework_swagger',
     'api',
 ]
-for app in INSTALLED_APPS;
+for app in INSTALLED_APPS:
     print(app, "is installed")
 
 MIDDLEWARE = [
