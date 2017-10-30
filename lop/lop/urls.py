@@ -17,9 +17,12 @@ from django.conf.urls import url
 from django.contrib import admin
 from . import views
 from django.conf import settings
+from lop.api import *
 #from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.index, name='index'),
+    url(r'^api/', schema_view)
+
 ]
