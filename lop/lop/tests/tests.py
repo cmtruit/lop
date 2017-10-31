@@ -5,13 +5,13 @@ from .views import MyView, my_view
 
 class SimpleTest(TestCase):
     def setUp(self):
-        # Every test needs access to the request factory.
+       # Every test needs access to the request factory.
         self.factory = RequestFactory()
         self.user = User.objects.create_user(
-            username='jacob', email='jacob@…', password='top_secret')
+        username='jacob', email='jacob@localhost.com', password='top_secret')
 
     def test_details(self):
-        # Create an instance of a GET request.
+    # Create an instance of a GET request.
         request = self.factory.get('/')
 
         #You can simulate a logged-in user by setting request.user manually.
