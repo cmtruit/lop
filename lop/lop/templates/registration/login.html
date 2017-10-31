@@ -1,12 +1,21 @@
-{% extends 'base.html' %}
 
-{% block title %}Login{% endblock %}
-
-{% block content %}
+<html>
+<head>
+  <link href="{% static "assets/scss/login.scss" %}" rel="stylesheet">
+</head>
   <h2>Login</h2>
-  <form method="post">
+
+<div id="fullscreen_bg" class="fullscreen_bg"/>
+
+<div class="container">
+
+	<form class="form-signin" method="post">
+		<h1 class="form-signin-heading text-muted">Sign In</h1>
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit">Login</button>
-  </form>
-{% endblock %}
+		<button class="btn btn-lg btn-primary btn-block" type="submit">
+			Sign In
+		</button>
+	</form>
+
+</div>
