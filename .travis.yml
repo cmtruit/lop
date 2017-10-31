@@ -20,7 +20,6 @@ install:
 
 before_script:
   - psql -c "CREATE DATABASE lop;" -U postgres
-  - psql -c "CREATE DATABASE lop_test;" -U postgres
   - psql -c "CREATE USER lopadmin WITH PASSWORD 'lop';" -U postgres
   - psql -c "ALTER ROLE lopadmin  SET client_encoding TO 'utf8';" -U postgres
   - psql -c "ALTER ROLE lopadmin SET default_transaction_isolation TO 'read committed';" -U postgres
