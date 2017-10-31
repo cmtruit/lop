@@ -96,6 +96,9 @@ DATABASES = {
         'PASSWORD' : 'lop',
         'HOST' : 'localhost',
         'PORT' : '',
+        'TEST': {
+            'NAME': 'lop_test',
+        },
     }
 }
 
