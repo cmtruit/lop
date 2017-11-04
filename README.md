@@ -24,9 +24,9 @@ source env/bin/activate
 5. Run `python manage.py test lop` to start the tests.
 6. Run `python manage.py createsuperuser` to create the admin login username/password (for administration)
 
-7. Start the development server and visit http://127.0.0.1:8000/admin/ 
+7. Start the development server and visit http://127.0.0.1:8000/admin/
 ```
-python manage.py runserver 0.0.0.0:8000` and visit http://127.0.0.1:8000/admin/
+python manage.py runserver 0.0.0.0:8000 and visit http://127.0.0.1:8000/admin/
 ```
 6. Use the username/password from Step 6 to login to the admin section of the app.
 
