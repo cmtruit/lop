@@ -11,7 +11,7 @@ urlpatterns = [
     url(r'^', include('api.urls')),
     url(r'^login/$', auth_views.login,  name='login'),
     url(r'^accounts/login/$', auth_views.login),
-    url(r'^logout/$', auth_views.logout, {'template_name': 'logged_out.html'}, name='logout'),
+    url(r'^logout/$', auth_views.logout, {'template_name': 'registration/logged_out.html'}, name='logout'),
     url(r'^logout/$', auth_views.logout, {'next_page': '/'}, name='logout'),
-    
+
 ]
