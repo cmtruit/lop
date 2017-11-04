@@ -1,7 +1,7 @@
 =====
 LOP
 =====
-[![Travis](https://api.travis-ci.org/cmtruit/lop.svg?branch=master)(https://travis-ci.org/cmtruit/lop)]
+[![Travis](https://api.travis-ci.org/cmtruit/lop.svg?branch=master)](https://travis-ci.org/cmtruit/lop)
 
 Lights-Out Patching is a Django app that manages Linux system patching
 
