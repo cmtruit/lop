@@ -1,12 +1,46 @@
-{% load staticfiles %}
-
-{% block title %}Login{% endblock %}
-
+{% extends 'registration/login-base.html' %}
 {% block content %}
-  <h2>Login</h2>
-  <form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Login</button>
-  </form>
+
+<div class="container">
+  <div class="row" id="pwd-container">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+<div class="login-form-heading">
+   <h2><span>Lights-Out</span> Patching</h2> 
+</div>
+      <section class="login-form">
+       <form method="post" role="login" >
+          {% csrf_token %}
+
+               <label for="id_username">Username:</label> 
+               <input type="text " class="form-control input-lg" name="username" autofocus required id="id_username" maxlength="254" />
+
+               <label for="id_password">Password:</label> 
+               <input type="password" class="form-control input-lg" name="password" required id="id_password" />
+          <div class="pwstrength_viewport_progress"></div>
+          
+          
+          <button type="submit" name="go" class="btn btn-lg btn-primary btn-block">Sign in</button>
+          <div>
+            <a href="#">Create account</a> or <a href="#">reset password</a>
+          </div>
+          
+        </form>
+        
+        <div class="form-links">
+          <a href="https://github.com/cmtruit/lop">project hosted on GitHub</a>
+        </div>
+      </section>  
+      </div>
+      
+      <div class="col-md-4"></div>
+      
+
+  </div>
+  
+    
+  
+  
+</div>
+
 {% endblock %}
