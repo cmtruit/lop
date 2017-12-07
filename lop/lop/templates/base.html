@@ -24,6 +24,7 @@
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <script src="https://use.fontawesome.com/0641854108.js"></script>
 <![endif]-->
 </head>
 
@@ -49,7 +50,7 @@
                 <!-- Logo -->
                 <!-- ============================================================== -->
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="/">
                         <!-- Logo icon -->
                         <b>
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
@@ -107,7 +108,7 @@
                                                                 {{ request.user.email }}</p>
                                                             <div class="divider">
                                                             </div>
-                                                            <a href="#" class="btn btn-primary btn-sm active">View Profile</a>
+                                                            <a href="/viewprofile/{{user.get_username}}" class="btn btn-primary btn-sm active">View Profile</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -115,10 +116,10 @@
                                                     <div class="navbar-footer-content">
                                                         <div class="row">
                                                             <div class="col-md-6">
-                                                                <a href="#" class="btn btn-default btn-sm">Change Passowrd</a>
+                                                                <a href="#" class="btn btn-default btn-sm">Change Password</a>
                                                             </div>
                                                             <div class="col-md-6">
-                                                                <a href="http://www.jquery2dotnet.com" class="btn btn-default btn-sm pull-right">Sign Out</a>
+                                                                <a href="/logout" class="btn btn-default btn-sm pull-right">Log Off</a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -146,7 +147,7 @@
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
                         <li>
-                            <a href="index.html" class="waves-effect"><i class="fa fa-clock-o m-r-10" aria-hidden="true"></i>Dashboard</a>
+                            <a href="/" class="waves-effect"><i class="fa fa-clock-o m-r-10" aria-hidden="true"></i>Dashboard</a>
                         </li>
                         <li>
                             <a href="pages-profile.html" class="waves-effect"><i class="fa fa-user m-r-10" aria-hidden="true"></i>Manage</a>

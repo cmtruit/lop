@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+        <div class="container-fluid" >
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">{{ request.user.get_full_name }}</h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="http://via.placeholder.com/300x300" class="img-circle img-responsive"> </div>
+                
+                <div class=" col-md-9 col-lg-9 "> 
+                  <table class="table table-user-information">
+                    <tbody>
+                       <tr>
+                        <td>UserID</td>
+                        <td>{{request.user.username}}</td>
+                      </tr>
+       <tr>
+                        <td>First Name</td>
+                        <td>{{request.user.first_name}}</td>
+                      </tr>
+                      <tr>
+                        <td>Last Name</td>
+                        <td>{{request.user.last_name}}</td>
+                      </tr>
+                        <td>Email</td>
+                        <td><a href="mailto:{{request.user.email}}">{{request.user.email}}</a></td>
+                      </tr>
+                        <td>Phone Number</td>
+                        <td>(Mobile)
+                        </td>
+                           
+                      </tr>
+                     
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+                 <div class="panel-footer">
+                        <span class="pull-right">
+                            <a href="edit.html" data-original-title="Edit this user" data-toggle="tooltip" type="button" class="btn btn-sm btn-warning"><i class="fa fa-pencil-square">edit</i></a>
+                        </span>
+                    </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}
