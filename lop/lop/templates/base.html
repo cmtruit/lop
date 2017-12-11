@@ -88,9 +88,15 @@
                     <!-- ============================================================== -->
                     <!-- Account profile menu -->
                     <!-- ============================================================== -->
-                                <ul class="nav navbar-nav navbar-right">
-                                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ user.get_full_name }}
-                                        <b class="caret"></b></a>
+                                <ul class="nav navbar-nav ">
+                                    <li class="dropdown">
+                                        <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <img src="http://placehold.it/160x160" alt="user" class="profile-pic m-r-5">
+                                        {{ user.get_username }}
+                                        </a>
+                                        <b class="caret"></b>
+                                        </a>
+                                      
                                         <ul class="dropdown-menu dropdown-menu-right dropdown-menu-custom">
                                             <li>
                                                 <div class="navbar-content">
