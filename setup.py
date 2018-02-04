@@ -3,9 +3,14 @@ import subprocess
 
 #install the requirements
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+command = 'source ' + BASE_DIR + '/lop/env/bin/activate'
+subprocess.Popen(command, shell=True).wait()
+
+print BASE_DIR
 PROJECT = '/lop'
 TEMPLATE = '/template/pg_hba.conf'
-packages = ["postgresql-server", "postgresql-devel", "postgresql-contrib"]
+packages = ["epel-release", "postgresql-server", "postgresql-devel", "postgresql-contrib", "python-pip"]
 for p in packages: 
     command = '/usr/bin/yum -y install ' + p
     subprocess.Popen(command, shell=True).wait()
