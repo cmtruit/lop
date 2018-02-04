@@ -35,6 +35,10 @@ LOGIN_REDIRECT_URL = 'index'
 #DB_USER = os.environ['DB_USER']
 #DB_PASS = os.environ['DB_PASS']
 
+print "BASE_DIR:" + BASE_DIR
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+print "MEDIA_ROOT:" + MEDIA_ROOT
+MEDIA_URL = '/media/'
 
 ALLOWED_HOSTS = ['*']
 
@@ -50,6 +54,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework_swagger',
     'api',
+    'lop',
+    'avatar',
 ]
 for app in INSTALLED_APPS:
     print app + " is installed"
@@ -143,7 +149,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
-#STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
-#print(STATIC_ROOT)
-STATICFILES_DIRS = ( os.path.join(BASE_DIR, 'lop/static'), )
+STATIC_ROOT = os.path.join(BASE_DIR, 'lop/static/')
+print "STATIC_ROOT" + STATIC_ROOT
+STATICFILES_DIRS = ( os.path.join(BASE_DIR, '/lop/'), )
 STATIC_URL = '/static/'

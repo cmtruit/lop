@@ -3,7 +3,8 @@ from django.contrib import admin
 from . import views
 from django.conf import settings
 from django.contrib.auth import views as auth_views
-
+from django.conf.urls import include, url
+from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -12,7 +13,9 @@ urlpatterns = [
     url(r'^login/$', auth_views.login,  name='login'),
     url(r'^accounts/login/$', auth_views.login),
     url(r'^logout/$', auth_views.logout, {'template_name': 'registration/logged_out.html'}, name='logout'),
-#    url(r'profile/(?P<username>[a-zA-Z0-9]+)$', views.get_user_profile),
     url(r'viewprofile/(?P<username>[a-zA-Z0-9]+)$', views.view_user_profile),
+    url(r'^avatar/', include('avatar.urls')),
+] 
+if settings.DEBUG is True:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-]

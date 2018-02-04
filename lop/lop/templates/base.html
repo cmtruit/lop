@@ -33,7 +33,7 @@
 </head>
 
 <body class="fix-header fix-sidebar card-no-border">
-
+{% load avatar_tags %}
     <!-- ============================================================== -->
     <!-- Preloader - style you can find in spinners.css -->
     <!-- ============================================================== -->
@@ -94,8 +94,12 @@
                                 <ul class="nav navbar-nav ">
                                     <li class="dropdown">
                                         <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <img src="http://placehold.it/160x160" alt="user" class="profile-pic m-r-5">
-                                        {{ user.get_username }}
+                                        {% if request.user|has_avatar %}
+                                        {% avatar user 35 alt="user" class="profile-pic m-r-5" %}
+                                        {{ user }}
+                                        {% else %}
+                                        {{ user }}
+                                        {% endif %}
                                         </a>
                                         <b class="caret"></b>
                                         </a>
@@ -105,10 +109,14 @@
                                                 <div class="navbar-content">
                                                     <div class="row">
                                                         <div class="col-md-5">
-                                                            <img src="http://placehold.it/120x120"
-                                                                alt="Alternate Text" class="img-responsive" />
+
+                                        {% if request.user|has_avatar %}
+                                        {% avatar user alt="user" class="img-responsive" %}
+                                        {% else %}
+                                        <img src="http://placehold.it/120x120" alt="Alternate Text" class="img-responsive" />
+                                        {% endif %}
                                                             <p class="text-center small">
-                                                                <a href="#">Change Photo</a></p>
+                                                                <a href="{% url 'avatar_change' %}">Change Photo</a></p>
                                                         </div>
                                                         <div class="col-md-7">
                                                             <span>{{ user.get_username }}</span>
