@@ -7,8 +7,6 @@ over-ride "Weak" message, show font in dark grey
     color: #333;
 } 
 
-/*
-*/
 .login-form-heading {
   color: grey;
   text-align:center;
@@ -38,13 +36,32 @@ over-ride "Weak" message, show font in dark grey
 		}
 	}
 
-body {
-    background: url(http://www.shearwaterdental.com/dental-chair/uploads/2017/05/Shearwater-login-background-1150x719.jpg); 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+
+
+
+
+*{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
+
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+canvas{
+    background-color: black;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:-1;
+}
+
 
 .login-form {
 	margin-top: 10px;
