@@ -94,12 +94,34 @@ WSGI_APPLICATION = 'lop.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
+if os.environ['DB_NAME']:
+    DB_NAME = os.environ['DB_NAME']
+else:
+    DB_NAME = 'postgres'
+if os.environ ['DB_USER']:
+    DB_USER = os.environ['DB_USER']
+else:
+    DB_USER = 'postgres'
+if os.environ['DB_HOST']:
+    DB_HOST = os.environ['DB_HOST']
+else:
+    DB_HOST = 'db'
+if os.environ['DB_PASS']:
+    DB_PASS = os.environ['DB_PASS']
+else:
+    DB_PASS = ''
+
+    
+
+
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME' : 'postgres',
-        'USER' : 'postgres',
-        'HOST' : 'db',
+        'NAME' : DB_NAME,
+        'USER' : DB_USER,
+        'PASSWORD' : DB_PASS,
+        'HOST' : DB_HOST,
         'PORT' : '5432',
         'TEST': {
             'NAME': 'lop_test',
