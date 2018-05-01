@@ -115,7 +115,7 @@ except:
 try:
     os.environ['DB_PASS']
     DB_PASS = os.environ['DB_PASS']
-else:
+except:
     DB_PASS = ''
 
     
