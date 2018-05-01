@@ -7,6 +7,7 @@ python:
 services: postgresql
 
 env:
+  global:
   - DJANGO=1.11
   - DB_NAME='lop'
   - DB_USER='lopadmin'
