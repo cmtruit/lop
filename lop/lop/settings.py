@@ -95,25 +95,25 @@ WSGI_APPLICATION = 'lop.wsgi.application'
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
 try:
-    os.environ['DB_NAME']:
+    os.environ['DB_NAME']
     DB_NAME = os.environ['DB_NAME']
 except:
     DB_NAME = 'postgres'
 
 try:
-    os.environ ['DB_USER']:
+    os.environ ['DB_USER']
     DB_USER = os.environ['DB_USER']
 except:
     DB_USER = 'postgres'
 
 try:
-    os.environ['DB_HOST']:
+    os.environ['DB_HOST']
     DB_HOST = os.environ['DB_HOST']
 except:
     DB_HOST = 'db'
 
 try:
-    os.environ['DB_PASS']:
+    os.environ['DB_PASS']
     DB_PASS = os.environ['DB_PASS']
 else:
     DB_PASS = ''
