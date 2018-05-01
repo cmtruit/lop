@@ -2,8 +2,8 @@
 
 
 #install:
-pip install coverage
-pip install -r requirements.txt
+#pip install coverage
+#pip install -r requirements.txt
 
 #before_script:
    psql -c "CREATE DATABASE lop;" -U postgres
@@ -15,8 +15,8 @@ pip install -r requirements.txt
    psql -c "ALTER USER lopadmin CREATEDB;" -U postgres
 
 #script:
-   cd ./lop/
-   python manage.py makemigrations
-   python manage.py migrate
-   python manage.py test lop
+#   cd ./lop/
+#   python manage.py makemigrations
+#   python manage.py migrate
+#   python manage.py test lop
 

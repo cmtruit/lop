@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:10.1
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+  web:
+    build: .
+    command: /bin/sh -C lop/setup.sh
+    command: python /app/lop/manage.py migrate --noinput
+    command: python /app/lop/manage.py runserver 0.0.0.0:5000
+    volumes:
+      - .:/app
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+
+volumes:
+  postgres_data:

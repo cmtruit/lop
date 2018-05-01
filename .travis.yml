@@ -2,12 +2,17 @@ language: python
 
 python:
 
-  - 2.7
+  - 3.6
 
 services: postgresql
 
 env:
+  global:
   - DJANGO=1.11
+  - DB_NAME='lop'
+  - DB_USER='lopadmin'
+  - DB_PASS='lop'
+  - DB_HOST='localhost'
 
 before_install:
   - export DJANGO_SETTINGS_MODULE=lop.settings
