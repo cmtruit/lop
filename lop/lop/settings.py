@@ -35,9 +35,9 @@ LOGIN_REDIRECT_URL = 'index'
 #DB_USER = os.environ['DB_USER']
 #DB_PASS = os.environ['DB_PASS']
 
-print "BASE_DIR:" + BASE_DIR
+print("BASE_DIR:" + BASE_DIR)
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
-print "MEDIA_ROOT:" + MEDIA_ROOT
+print("MEDIA_ROOT:" + MEDIA_ROOT)
 MEDIA_URL = '/media/'
 
 ALLOWED_HOSTS = ['*']
@@ -58,7 +58,7 @@ INSTALLED_APPS = [
     'avatar',
 ]
 for app in INSTALLED_APPS:
-    print app + " is installed"
+    print(app + " is installed")
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -97,11 +97,10 @@ WSGI_APPLICATION = 'lop.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME' : 'lop',
-        'USER' : 'lopadmin',
-        'PASSWORD' : 'lop',
-        'HOST' : 'localhost',
-        'PORT' : '',
+        'NAME' : 'postgres',
+        'USER' : 'postgres',
+        'HOST' : 'db',
+        'PORT' : '5432',
         'TEST': {
             'NAME': 'lop_test',
         },
@@ -150,6 +149,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 STATIC_ROOT = os.path.join(BASE_DIR, 'lop/static/')
-print "STATIC_ROOT" + STATIC_ROOT
+print("STATIC_ROOT" + STATIC_ROOT)
 STATICFILES_DIRS = ( os.path.join(BASE_DIR, '/lop/'), )
 STATIC_URL = '/static/'
