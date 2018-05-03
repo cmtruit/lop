@@ -15,8 +15,8 @@ urlpatterns = [
     url(r'^logout/$', auth_views.logout, {'template_name': 'registration/logged_out.html'}, name='logout'),
     url(r'viewprofile/(?P<username>[a-zA-Z0-9]+)$', views.view_user_profile),
     url(r'^avatar/', include('avatar.urls'))
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 
+]
 
-#if settings.DEBUG is True:
-#urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+if settings.DEBUG is True:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
