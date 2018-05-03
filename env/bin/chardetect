@@ -1,4 +1,4 @@
-#!/root/git/env/bin/python2
+#!/root/git/lop/env/bin/python3.6
 
 # -*- coding: utf-8 -*-
 import re
