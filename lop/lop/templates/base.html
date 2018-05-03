@@ -1,4 +1,5 @@
 {% load staticfiles %}
+{% load avatar_tags %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -95,7 +96,7 @@
                                     <li class="dropdown">
                                         <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         {% if request.user|has_avatar %}
-                                        {% avatar user 35 alt="user" class="profile-pic m-r-5" %}
+                                        {% avatar user 35 %}
                                         {{ user }}
                                         {% else %}
                                         {{ user }}
