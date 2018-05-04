@@ -21,7 +21,7 @@
     <link href="{% static "css/profile.css"%}" rel="stylesheet">
 
     <!-- You can change the theme colors from here -->
-    <link href="{% static "css/colors/default.css"%}" id="theme" rel="stylesheet">
+    <link href="{% static "css/colors/dark-lop.css"%}" id="theme" rel="stylesheet">
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -50,7 +50,7 @@
         <!-- Topbar header - style you can find in pages.scss -->
         <!-- ============================================================== -->
         <header class="topbar">
-            <nav class="navbar top-navbar navbar-toggleable-sm navbar-light">
+            <nav class="navbar top-navbar navbar-toggleable-sm navbar-dark">
                 <!-- ============================================================== -->
                 <!-- Logo -->
                 <!-- ============================================================== -->
@@ -94,7 +94,7 @@
                     <!-- ============================================================== -->
                                 <ul class="nav navbar-nav ">
                                     <li class="dropdown">
-                                        <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <a class="nav-link dropdown-toggle waves-effect waves-dark" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         {% if request.user|has_avatar %}
                                         {% avatar user 35 %}
                                         {{ user }}
