@@ -7,7 +7,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 command = 'source ' + BASE_DIR + '/lop/env/bin/activate'
 subprocess.Popen(command, shell=True).wait()
 
-print BASE_DIR
+print(BASE_DIR)
 PROJECT = '/lop'
 TEMPLATE = '/template/pg_hba.conf'
 packages = ["epel-release", "postgresql-server", "postgresql-devel", "postgresql-contrib", "python-pip"]
@@ -48,7 +48,7 @@ for action in actions:
     try:
         subprocess.Popen('python manage.py', action, shell=True)
     except:
-        print "ERROR: cannot make any migrations or test lop"
+        print("ERROR: cannot make any migrations or test lop")
 
 
 
