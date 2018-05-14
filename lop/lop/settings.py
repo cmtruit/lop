@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     'api',
     'lop',
     'avatar',
+    'accounts'
 ]
 for app in INSTALLED_APPS:
     print(app + " is installed")
