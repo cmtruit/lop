@@ -1,19 +1,23 @@
 {% extends "base.html" %}
 {% load i18n avatar_tags %}
+{% load staticfiles %}
 
 
 {% block content %}
+
+
+
 <div class="container-fluid"> 
- <div class="row">
+ <div class="row" >
+    <div class="col-sm">
                     <div class="col-sm-12">
-                        <div class="card">
-                            <div class="card-block">
-                                <h4 class="card-title"><p>{% trans "Your current avatar: " %></p></h4>
-                                {% avatar user %}
+                      <div class="panel panel-default">
+                            <div class="form-group">
+                                <h4 class="card-title"><p>{{ request.user.username }}{% trans "'s current avatar: " %}{% avatar user 40 %}</p></h4>
                                 {% if not avatars %}
                                 <p>{% trans "Cannot find an avatar for you, please upload a new one." %}</p>
                                 {% else %}
-                                <form method="POST" action="{% url 'avatar_change' %}">
+                                <form class="form-control-file" method="POST" action="{% url 'avatar_change' %}">
                                 <ul> 
                                     {{ primary_avatar_form.as_ul }}
                                 </ul>
@@ -26,8 +30,22 @@
         <p>{% csrf_token %}<input type="submit" value="{% trans "Upload New Image" %}" /></p>
     </form>
                             </div>
+                         </div>
                         </div>
-                    </div>
-        </div>
+       <div class="col-sm">
+         <div class="card">
+           <h4 class="card-title"><p>Changing Avatars</p></h4>
+            <ul>
+             <li>Default Avatar</li>
+                 <p> Choose a default avatar to be displayed as 'active' on your users profile and click "Choose New Default". </p>
+            <li>Uploading a new Avatar</li>
+                 <p>Click "Choose File", From the file explorer windows that opens select your new profile Avatar and confirm.</p>
+                 <p>Select "Upload New Image" to upload your new Avatar. This will be your new default Avatar.</p>
+ 
+            </ul>
+         </div>
+      </div>
+   </div>
 </div>
+
 {% endblock %}
