@@ -57,7 +57,6 @@ INSTALLED_APPS = [
     'api',
     'lop',
     'avatar',
-    'accounts'
 ]
 for app in INSTALLED_APPS:
     print(app + " is installed")
@@ -139,7 +138,7 @@ DATABASES = {
 }
 
 
-AUTH_PROFILE_MODULE = 'lop.account.UserProfile'
+AUTH_PROFILE_MODULE = 'Profile'
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
