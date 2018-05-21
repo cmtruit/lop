@@ -3,10 +3,54 @@
 {% block title %}Sign Up{% endblock %}
 
 {% block content %}
-  <h2>Sign up</h2>
-  <form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Sign up</button>
-  </form>
+
+<canvas id="nokey" width="800" height="800">
+    Your Browser Don't Support Canvas, Please Download Chrome ^_^``
+</canvas>
+
+<div class="container-flid">
+
+  <div class="row" id="pwd-container">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+<div class="login-form-heading">
+   <h2><span>Lights-Out</span> Patching</h2>
+</div>
+  <section class="login-form">
+        <div class="signup-box clearfix" >
+            <div class="panel-body">
+              <h2>Sign up</h2>
+              <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Sign up</button>
+                or return to <a href="/">login</a>
+              </form>
+
+
+
+          </div>
+
+
+
+</section>
+        <div class="form-links">
+          <a href="https://github.com/cmtruit/lop">project hosted on GitHub</a>
+        </div>
+      </div>
+
+      <div class="col-md-4"></div>
+
+
+  </div>
+
+
+
+
+</div>
+
+
+
+
+
 {% endblock %}

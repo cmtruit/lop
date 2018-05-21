@@ -6,7 +6,7 @@ from django.contrib.auth import views as auth_views
 from django.conf.urls import include, url
 from django.conf.urls.static import static
 from django.urls import path
-from django.contrib import admin 
+from django.contrib import admin
 from .views import signup
 admin.autodiscover()
 
@@ -22,8 +22,9 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     #url(r'^account/', include('accounts.urls')),
     url(r'^signup/$', signup, name='signup'),
-
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 
+    url(r'^password/$', views.change_password, name='change_password'),
+    url('^', include('django.contrib.auth.urls')),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 #account signup
 #from django.conf.urls.default import *
@@ -32,4 +33,3 @@ urlpatterns = [
 
 #if settings.DEBUG is True:
 #urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
