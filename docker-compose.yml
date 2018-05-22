@@ -2,20 +2,53 @@ version: '3'
 
 services:
   db:
+    restart: always
     image: postgres:10.1
+    volumes_from:
+      - data
     volumes:
-      - postgres_data:/var/lib/postgresql/data/
+      - ./postgres/docker-entrypoint-initdb.d:/docker-entryoint-initdb.d
+      - ./backups/postgresql:/backups
+    env_file:
+      - environ
+    exose:
+      - "5432"
+  nginx:
+    restart: always
+    build: ./nginx
+    ports:
+      - "80:80"
+    links:
+      - web:web
+  redis:
+    restart: always
+    image: redis:latest
+    expose:
+      - "6379"
+
   web:
+    restart: always
     build: .
     command: /bin/sh -C lop/setup.sh
     command: python /app/lop/manage.py migrate --noinput
-    command: python /app/lop/manage.py runserver 0.0.0.0:8000
+    command: /usr/bin/gunicorn lop.wsgi:application -w 2 -b :8000
+    #command: python /app/lop/manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/app
+    expose:
+      - "8000"
     ports:
       - "8000:8000"
     depends_on:
       - db
-
 volumes:
   postgres_data:
+
+  data:
+    restart: always
+    image: alpine
+    volumes:
+      - /var/lib/postgresql
+    command: "true"
+
+    

@@ -119,7 +119,7 @@ try:
 except:
     DB_PASS = ''
 
-    
+
 
 
 
@@ -137,7 +137,7 @@ DATABASES = {
     }
 }
 
-
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 AUTH_PROFILE_MODULE = 'Profile'
 
 # Password validation
