@@ -18,6 +18,8 @@
     <link href="{% static "assets/plugins/bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="{% static "css/style.css"%}" rel="stylesheet">
+    <link href="{% static "css/app.css"%}" rel="stylesheet">
+    <link href="{% static "css/animate.css"%}" rel="stylesheet">
     <link href="{% static "css/profile.css"%}" rel="stylesheet">
 
     <!-- You can change the theme colors from here -->
@@ -92,8 +94,24 @@
                     <!-- ============================================================== -->
                     <!-- Account profile menu -->
                     <!-- ============================================================== -->
+
                                 <ul class="nav navbar-nav ">
+
+                                  <li class="dropdown"><a href="#" class="nav-link dropdown-toggle waves-effect waves-dark" data-toggle="dropdown"><i class="fa fa-lg fa-comments"></i><span class="badge badge-danger">5</span> </a>
+                                        <ul class="dropdown-menu dropdown-menu-large">
+                                                      <li><a href="#"><span class="label label-primary">7:00 AM</span> Hi :)</a></li>
+                                                      <li role="presentation" class="divider"></li>
+                                                      <li><a href="#"><span class="label label-primary">8:00 AM</span> How are you?</a></li>
+                                                      <li role="presentation" class="divider"></li>
+                                                      <li><a href="#"><span class="label label-primary">9:00 AM</span> What are you doing?</a></li>
+                                                      <li class="divider"></li>
+                                                      <li><a href="#" class="text-center">View All</a></li>
+                                        </ul>
+                                        </li>
+
+
                                     <li class="dropdown">
+
                                         <a class="nav-link dropdown-toggle waves-effect waves-dark" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         {% if request.user|has_avatar %}
                                         {% avatar user 35 %}
@@ -143,11 +161,14 @@
                                                 </div>
                                             </li>
                                         </ul>
+
                                     </li>
                                 </ul>
 
 
+
                 </div>
+
             </nav>
         </header>
         <!-- ============================================================== -->
